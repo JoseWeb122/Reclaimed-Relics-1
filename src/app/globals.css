@@ -1,0 +1,83 @@
+@import "tailwindcss";
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300;1,9..40,400&display=swap');
+
+@theme {
+  --font-serif: 'Cormorant Garamond', Georgia, serif;
+  --font-sans: 'DM Sans', 'Inter', system-ui, sans-serif;
+
+  --color-ivory: #F7F4F0;
+  --color-cream: #F0EBE3;
+  --color-linen: #EAE3D6;
+  --color-oatmeal: #D8CFC2;
+  --color-camel: #C5A882;
+  --color-taupe: #A89880;
+  --color-walnut: #6B5344;
+  --color-espresso: #4A3728;
+  --color-charcoal: #2D2420;
+  --color-terracotta: #B57A5E;
+  --color-terracotta-soft: #D4A88F;
+  --color-brass: #BFA067;
+  --color-brass-soft: #D4C69A;
+  --color-sage: #A8A898;
+  --color-rose-mute: #C4A89A;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'DM Sans', 'Inter', system-ui, sans-serif;
+  background-color: #F7F4F0;
+  color: #2D2420;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background: #C5A882;
+  color: #2D2420;
+}
+
+.font-editorial {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+}
+
+.font-editorial-italic {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-style: italic;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #F0EBE3;
+}
+::-webkit-scrollbar-thumb {
+  background: #C5A882;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #A89880;
+}
+
+/* Soft image reveal */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-up {
+  animation: fadeUp 0.8s ease-out forwards;
+}
+
+/* Subtle zoom */
+.zoom-on-hover {
+  transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.zoom-on-hover:hover {
+  transform: scale(1.04);
+}
